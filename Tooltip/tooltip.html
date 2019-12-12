@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tooltip | RAD Components</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+</style>
+<body>
+    <main class="main">
+        <div class="header">
+            <h1>The Tooltip</h1>
+            <p>A "R.A.D Component" by Lily Williams</p>
+            <hr aria-hidden="true">
+        </div>
+        <h2>Working Example</h2>
+        <p>In order to open the tooltip press the button presented after the text 'A Water Bear'.</p>
+        <div class="working-example">
+            <p class="test-content">A Water Bear</p>
+            <button id="tooltip-btn" aria-expanded="false" aria-controls="tooltip">
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                <span class="a11y-hidden">More Information on Water bears</span>
+            </button>
+            <div class="tooltip-content hidden" id="tooltip" role="group" aria-label="More information on Water bears">
+                <p class="tooltip-msg">A Water bear is actually a cute nickname for the incredible micro animal - a Tardigrade.</p>
+                <button id="close-btn">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                    <span class="a11y-hidden">Close More information on Water Bears</span>
+                </button>
+            </div>
+        </div>
+        <hr aria-hidden="true">
+        <h2>Supporting Notes</h2>
+        <h3>Keyboard-only Considerations</h3>
+        <p>To ensure the tooltip is operable for users with motor impairments (such as a tremor) who rely on keyboard-only access, the following has been taken in to consideration:</p>
+        <ul>   
+            <li>A &lt;button&gt; element has been used to implement the tool tip and contain the icon. This is because this default element is keyboard-only accessible by default. It receives focus when TAB is pressed, and operates upon pressing SPACE / ENTER.</li>
+            <li>IF the tool tip is visible, keyboard-only users are able to close the tooltip by pressing the ESC key. Once ESC is pressed, the .focus() is set to the button that triggered the tooltip to be visible. This ensures users focus is not lost on the page.</li>
+            <li>When a keyboard only user presses the close button within the tooltip the .focus() is again set back to the button that triggered the tooltip to be visible.</li>
+        </ul>
+        <h3>Screen reader Considerations</h3>
+        <p>To ensure the tooltip is accessible to screen reader users, the following has been taken into consideration:</p>
+        <ul>    
+            <li>The &lt;button&gt; the tooltip has the WAI-ARIA attribute of aria-expanded=false. On click this is dynamically changed to true. This informs VoiceOver users that the button expands / collapses additional content.</li>
+            <li>The &lt;button&gt; triggering the tooltip has the attribute of aria-controls with an ID pointing to the tooltip content itself.</li>
+            <li>The &lt;button&gt; triggering the tooltip has hidden text specifically for screen reader users giving the button a meaningful label for VoiceOver users. This is exposed to screen reader softwares but is not visible on screen (unless CSS is disabled).</li>
+        </ul>
+        <code>
+            <pre>
+        &lt;button id="tooltip-btn" <span class="highlight">aria-expanded="false"</span> <span class="highlight">aria-controls="tooltip"</span>>
+            &lt;i class="fas fa-info-circle" <span class="highlight">aria-hidden="true"</span>>&lt;/i>
+            &lt;span <span class="highlight">class="a11y-hidden"</span>>More Information on Water bears&lt;/span>
+        &lt;/button>
+            </pre>
+        </code>
+        <ul>
+            <li>The &lt;div&gt; containing the tooltip content has the role=group - this allows screen reader users to associate all the content within the "group" together.</li>
+            <li>The &lt;div&gt; also has an aria-label specifically labelling the purpose of the tool tip - i.e. "More information on Water Bears".</li>
+        </ul>
+        <code>
+            <pre>
+        &lt;div class="tooltip-content hidden" <span class="highlight">id="tooltip"</span> <span class="highlight">role="group"</span> <span class="highlight">aria-label="More information on Water bears"</span>>
+            &lt;p class="tooltip-msg">A Water bear is ...&lt;/p>
+            &lt;button id="close-btn">
+                &lt;i class="fas fa-times" <span class="highlight">aria-hidden="true"</span>>&lt;/i>
+                &lt;span <span class="highlight">class="a11y-hidden"</span>>Close More information on Water Bears&lt;/span>
+            &lt;/button>
+        &lt;/div>
+            </pre>
+        </code>
+        <h3>Additional Info</h3>
+        <ul>
+            <li>If a user mouse clicks any where else on the page (aside from the tooltip itself) then it must no longer be visible. It is common for users with low vision to complain about tool tip content blocking other content. They expect if they click else where with their cursor that it will no longer be visible.</li>
+            <li>For users with visual impairments who rely on screen magnification software to access the web, the tooltip must always be visible and not-only on mouse hover.</li>
+            <li>Finally the tooltip contains a 'Close' button. This assists users with cognitive impairments who may be unaware of how to close the tooltip.</li>
+        </ul>
+        <hr aria-hidden="true">
+    </main>
+    <footer>
+        <p>This Tooltip is part of R.A.D Components. R.A.D stands for Reusable, Accessible & Dynamic. </p>
+        <p>R.A.D's purpose is to share accessible solutions to web components, ensuring content is accessible to all users.</p>
+        <p>It is built and maintained by <a href="https://lilianna11y.com">Lily Williams.</a></p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="index.js"></script>
+</html>
