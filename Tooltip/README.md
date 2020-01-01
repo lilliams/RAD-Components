@@ -1,7 +1,7 @@
 # RAD-Components - The Tooltip
 Reusable, Accessible, Dynamic Components
 
-Keyboard-only Considerations
+<h2>Keyboard-only Considerations</h2>
 
 To ensure the tooltip is operable for users with motor impairments (such as a tremor) who rely on keyboard-only access, the following has been taken in to consideration:
 
@@ -9,7 +9,7 @@ To ensure the tooltip is operable for users with motor impairments (such as a tr
 * IF the tool tip is visible, keyboard-only users are able to close the tooltip by pressing the ESC key. Once ESC is pressed, the .focus() is set to the button that triggered the tooltip to be visible. This ensures users focus is not lost on the page.
 * When a keyboard only user presses the close button within the tooltip the .focus() is again set back to the button that triggered the tooltip to be visible.
 
-Screen reader Considerations
+<h2>Screen reader Considerations</h2>
 
 To ensure the tooltip is accessible to screen reader users, the following has been taken into consideration:
 
@@ -19,7 +19,7 @@ To ensure the tooltip is accessible to screen reader users, the following has be
 * The <div> containing the tooltip content has the role=group - this allows screen reader users to associate all the content within the "group" together.
 * The <div> also has an aria-label specifically labelling the purpose of the tool tip - i.e. "More information on Water Bears".
                     
-Additional Info
+<h2>Additional Info</h2>
 
 * If a user mouse clicks any where else on the page (aside from the tooltip itself) then it must no longer be visible. It is common for users with low vision to complain about tool tip content blocking other content. They expect if they click else where with their cursor that it will no longer be visible.
 * For users with visual impairments who rely on screen magnification software to access the web, the tooltip must always be visible and not-only on mouse hover.
