@@ -16,23 +16,9 @@ To ensure the tooltip is accessible to screen reader users, the following has be
 * The <button> the tooltip has the WAI-ARIA attribute of aria-expanded=false. On click this is dynamically changed to true. This informs VoiceOver users that the button expands / collapses additional content.
 * The <button> triggering the tooltip has the attribute of aria-controls with an ID pointing to the tooltip content itself.
 * The <button> triggering the tooltip has hidden text specifically for screen reader users giving the button a meaningful label for VoiceOver users. This is exposed to screen reader softwares but is not visible on screen (unless CSS is disabled).
-         
-&lt;button id="tooltip-btn" aria-expanded="false" aria-controls="tooltip">
-   &lt;i class="fas fa-info-circle" aria-hidden="true">&lt;/i>
-   &lt;span class="a11y-hidden">More Information on Water bears&lt;/span>
-&lt;/button>
-            
 * The <div> containing the tooltip content has the role=group - this allows screen reader users to associate all the content within the "group" together.
 * The <div> also has an aria-label specifically labelling the purpose of the tool tip - i.e. "More information on Water Bears".
-        
-&lt;div class="tooltip-content hidden" id="tooltip" role="group" aria-label="More information on Water bears">
-   &lt;p class="tooltip-msg">A Water bear is ...&lt;/p>
-   &lt;button id="close-btn">
-       &lt;i class="fas fa-times" aria-hidden="true">&lt;/i>
-       &lt;span class="a11y-hidden">Close More information on Water Bears&lt;/span>
-   &lt;/button>
-&lt;/div>
-            
+                    
 Additional Info
 
 * If a user mouse clicks any where else on the page (aside from the tooltip itself) then it must no longer be visible. It is common for users with low vision to complain about tool tip content blocking other content. They expect if they click else where with their cursor that it will no longer be visible.
