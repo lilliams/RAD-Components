@@ -17,21 +17,21 @@ To ensure the tooltip is accessible to screen reader users, the following has be
 * The <button> triggering the tooltip has the attribute of aria-controls with an ID pointing to the tooltip content itself.
 * The <button> triggering the tooltip has hidden text specifically for screen reader users giving the button a meaningful label for VoiceOver users. This is exposed to screen reader softwares but is not visible on screen (unless CSS is disabled).
          
-<button id="tooltip-btn" aria-expanded="false" aria-controls="tooltip">
-  <i class="fas fa-info-circle" aria-hidden="true"></i>
-  <span class="a11y-hidden">More Information on Water bears</span>
-</button>
+&lt;button id="tooltip-btn" aria-expanded="false" aria-controls="tooltip">
+   &lt;i class="fas fa-info-circle" aria-hidden="true">&lt;/i>
+   &lt;span class="a11y-hidden">More Information on Water bears&lt;/span>
+&lt;/button>
             
 * The <div> containing the tooltip content has the role=group - this allows screen reader users to associate all the content within the "group" together.
 * The <div> also has an aria-label specifically labelling the purpose of the tool tip - i.e. "More information on Water Bears".
         
-<div class="tooltip-content hidden" id="tooltip" role="group" aria-label="More information on Water bears">
-    <p class="tooltip-msg">A Water bear is ...</p>
-    <button id="close-btn">
-        <i class="fas fa-times" aria-hidden="true"></i>
-        <span class="a11y-hidden">Close More information on Water Bears</span>
-    </button>
-</div>
+&lt;div class="tooltip-content hidden" id="tooltip" role="group" aria-label="More information on Water bears">
+   &lt;p class="tooltip-msg">A Water bear is ...&lt;/p>
+   &lt;button id="close-btn">
+       &lt;i class="fas fa-times" aria-hidden="true">&lt;/i>
+       &lt;span class="a11y-hidden">Close More information on Water Bears&lt;/span>
+   &lt;/button>
+&lt;/div>
             
 Additional Info
 
