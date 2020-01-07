@@ -11,7 +11,3 @@ RAD Components has been built with HTML5, CSS, <a href="https://www.w3.org/TR/wa
 Each has been thoroughly tested with screen reader softwares including Apple's built in Screen reader <a href="https://www.apple.com/uk/accessibility/mac/vision/">VoiceOver</a> and / or <a href="https://www.nvaccess.org">NVDA</a>.
 
 Any questions or ideas feel free to get in touch :)
-
-Some additional resources I love for Accessibility are as follows:
-
-TBC.
