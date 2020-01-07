@@ -3,7 +3,6 @@ Reusable, Accessible, Dynamic Components
 
 <h2>Screen Reader Considerations<h2>
 <h3>The Modal Dialog Container</h3>
-
 To assist Screen reader users in understanding the contents of the modal dialog itself, the followng must be applied;
 
 * The div containing dialog content is positioned outside of the main at the end of the DOM.
