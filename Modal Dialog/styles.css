@@ -1,0 +1,120 @@
+/**** .a11y-hidden CLASS FOR HIDING CONTENT OFF SCREEN FOR SCREEN READER USERS ****/
+
+.a11y-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
+/**** MISC STYLES ****/
+
+.header {
+    text-align: center;
+    font-size: 30px;
+}
+.header > h1 {
+    margin: 10px 0px 5px 0px;
+}
+.header > p {
+    font-size: 25px;
+    margin: 0 0 30px 0;
+}
+
+h1,h2,span,div,ul, button, p, h3, footer {
+    font-family: 'Lora', serif;
+}
+
+main, a {
+    width: 85%;
+    margin: 0 auto;
+    color: white;
+}
+body {
+    background-color:#456c63;
+}
+
+.working-example {
+    text-align: center;
+    font-size: 25px;
+    margin: 50px 0px;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    width: 85%;
+    margin: 30px auto;
+} 
+
+pre {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+pre > .highlight {
+    color:black;
+    background-color: white;
+    font-family: Consolas,monospace;
+}
+
+
+
+/**** MODAL STYLES ****/
+
+button {
+    background-color:#456c63;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    text-align: center;
+    margin: 20 20;
+}
+
+/**** DIALOG STYLES ****/
+
+.modal-dialog{
+    border: 3px solid black;
+    padding: 1em;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    left: 20%;
+    background:#456c63;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    z-index: 2;
+    color: white;
+}
+
+#close-dialog {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dimmed-background {
+    background-color: rgb(45, 34, 34);
+    color: grey;
+}
+
+
+/**** HIDDEN ****/
+
+.hidden {
+    display:none;
+}
+
+

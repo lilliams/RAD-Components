@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Dialog | RAD Components</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <div class="header">
+            <h1>A Modal Dialog</h1>
+            <p>A "R.A.D Component" by Lily Williams</p>
+            <hr aria-hidden="true">
+        </div>
+        <h2>Working Example</h2>
+        <p>In order to open the modal dialog, press the 'Hello world' button below.</p>
+        <button id="dialog-btn">Hello world</button>
+        <hr aria-hidden="true">
+        <h2>Supporting Notes</h2>
+        <h3>Screen Reader Considerations</h3>
+        <h4>The Modal Dialog Container</h4>
+        <p>To assist Screen reader users in understanding the contents of the modal dialog itself, the followng must be applied;</p>
+        <ul>
+            <li>The &lt;div&gt; containing dialog content is positioned outside of the &lt;main&gt; at the end of the DOM.</li>
+            <li>The first heading in a modal dialog must be an &lt;h2&gt;.</li>
+            <li>The modal dialog container must have a role="dialog" attribute for screen reader users.</li>
+            <li>The modal dialog container should have the tabindex attribute with a value of -1 by default. This allows it to be programmatically focusable as a &lt;div&gt; is not a native interactive html element.</li>
+            <li>Finally, the modal dialog container must have an aria-labelledby attribute with an ID pointing to the main heading of the dialog. This will label the dialog to assist screen reader users.</li>
+        </ul>
+        <code>
+            <pre>
+        &lt;div class="modal-dialog hidden" <span class="highlight">role="dialog" aria-labelledby="dialog-name" tabindex="-1"</span> id="dialog-window">
+            &lt;h2 id="dialog-name">Hello World&lt;/h2>
+            &lt;p id="dialog-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit...&lt;/p>
+            &lt;a href="test.html" id="dialog-link">Test link in dialog&lt;/a>
+            &lt;button id="close-dialog">
+                &lt;span>Close&lt;/span>
+                &lt;span <span class="highlight">class="a11y-hidden"</span>>Hello World dialog&lt;/span>
+            &lt;/button>
+        &lt;/div>
+            </pre>
+        </code>
+        <ul>
+            <li>The close &lt;button&gt; within the dialog has hidden text specifically for screen reader users specifying what it will close. This text is not visible on screen but is announced by screen reader softwares.</li>
+        </ul>
+        <h4>Keyboard-only Considerations</h4>
+        <h3>When the Modal Dialog is Opened</h3>
+        <ul>
+            <li>The .focus() should be set to the dialog container.</li>
+            <li>All elements behind the dialog must not be focusable when navigating with a keyboard-only (TAB key). This can be done by setting aria-hidden to true and tabindex="-1" to the &lt;main&gt ;.</li>
+        </ul>
+        <h3>To Close the Modal Dialog</h3>
+        <ul>
+            <li>Users must be able to close the modal dialog using a close &lt;button&gt; within the dialog itself. The close button must be placed as the last element in the dialog container in the DOM, and positioned using CSS.</li>
+            <li>Users should be able to close the modal dialog by pressing the ESC button (keyCode == 27). When ESC is pressed, the .focus()</li>
+            <li>Users can close the dialog by mouse clicking outside the dialog container.</li>
+            <li>If users close the dialog container using a keyboard or a screen reader, the keyboard focus and screen reader cursor should be positioned to the button that triggered the dialog.</li>
+            <li>Ensure to remove the aria-hidden from the &lt;main&gt; and set the tabindex of all focusable elements back to their original values.</li>
+        </ul>
+        <hr aria-hidden="true">
+    </main>
+    <footer>
+        <p>This Tooltip is part of R.A.D Components. R.A.D stands for Reusable, Accessible & Dynamic. </p>
+        <p>R.A.D's purpose is to share accessible solutions to web components, ensuring content is accessible to all users.</p>
+        <p>It is built and maintained by <a href="https://lilianna11y.com" id="footer-link">Lily Williams.</a></p>
+    </footer>
+    <div class="modal-dialog dialog hidden" role="dialog" id="dialog-window" aria-labelledby="dialog-name" tabindex="-1">
+        <h2 id="dialog-name">Hello World</h2>
+        <p id="dialog-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quas tempore tenetur ab illo. Error quisquam, placeat exercitationem esse est, vero possimus quis dolores maiores reiciendis dicta vel eaque dolorum!</p>
+        <a href="test.html" id="dialog-link">Test link in dialog</a>
+        <p id="dialog-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eveniet excepturi corrupti dolorum reprehenderit tenetur libero temporibus quam? Culpa esse maxime magni nisi! Praesentium magnam natus voluptatem, deserunt provident fugit!</p>
+        <button id="close-dialog">
+            <span>Close</span>
+            <span class="a11y-hidden">Hello World dialog</span>
+        </button>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="index.js"></script>
+</html>
