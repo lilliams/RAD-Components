@@ -1,4 +1,4 @@
-# RAD-Components - The Tooltip
+# RAD-Components - A Modal Dialog
 Reusable, Accessible, Dynamic Components
 
 <h2>Screen Reader Considerations<h2>
