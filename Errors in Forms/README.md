@@ -1,4 +1,4 @@
-#RAD-Components - A Modal Dialog
+# RAD-Components - A Modal Dialog
 Reusable, Accessible, Dynamic Components
 
 <h2>Supporting Notes</h2>
