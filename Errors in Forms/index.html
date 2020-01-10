@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Errors in Forms | RAD Components</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <div class="header">
+            <h1>Errors in Forms</h1>
+            <p>A "R.A.D Component" by Lily Williams</p>
+            <hr aria-hidden="true">
+        </div>
+        <h2>Working Example</h2>
+        <p>The following prototype only checks if the input field is empty in order for an error to become visible. It has been created to demonstrate how to implement errors for screen reader users. In order to use the prototype, please navigate the form elements using the TAB key. If the input field is left blank and the 'Submit' button has the keyboard focus, the error messaging will show. Note that the 'submit' button does not function.</p>
+        <div class="form-example">
+            <label for="first-name">
+                <span>First Name</span>
+                <span aria-hidden="true">*</span>
+                <span aria-hidden="true">:</span>
+            </label>
+            <input type="text" id="first-name" aria-required="true" aria-describedby="error-msg">
+            <i class="fas fa-exclamation hidden" aria-hidden="true"></i>
+            <span id="error-msg-1" aria-live="assertive" role="alert"></span>
+            <button>Submit</button>
+        </div>
+
+
+        <hr aria-hidden="true">
+        <h2>Supporting Notes</h2>
+        <h3>The Error Message</h3>
+        <ul>
+            <li>The &lt;span&gt; that will dynamically be updated wih the error message is empty on page load.</li> 
+            <li>It has the attribute aria-live set to assertive and the aria role of alert - this means content added to this dynamically (when an error is present) will be automatically announced by screen reader softwares and users will hear that the content is an 'alert'.</li>
+            <li>The id of the error message is associated to the &lt;input&gt; using aria-describedby. This means when the input has the keyboard focus, screen reader software will announce the error message content.</li>
+            <li>When the error is no longer present, the spans content is emptied.</li>
+            <li>The icon used to visually indicate an error is visible is purely decorative. It has been intentionally hidden from screen reader softwares using the aria-hidden attribute with a value of true.</li>
+            <li>It is important that error message contents informs users how to ammend their error, rather than just "Please enter a value". For more complex entries such as entering an email it is good practise to include an example to help users complete a form.</li>
+        </ul>
+        <code>
+            <pre>
+            &lt;i class="fas fa-exclamation hidden" <span class="highlight">aria-hidden="true"</span>>&lt;/i>
+            &lt;span id="error-msg-1" <span class="highlight">aria-live="assertive"</span> <span class="highlight">role="alert"</span>>&lt;/span>
+        </pre>
+        </code>
+        <h3>The Input</h3>
+        <ul>
+            <li>The Label is associated explicity using For / ID. This ensures the label is announced by screen reader softwares when it has focus.</li>
+            <li>Rather than using the HTML5 attribute of 'required', instead aria-required=true is applied. This results in more consistent outputs for more screen readers softwares across browsers.</li>
+            <li>The asterisks that visually indicates the field is required, and the colon are purely decorative. They have been intentionally hidden from screen reader softwares using the aria-hidden attribute with a value of true.</li>
+            <li>When an error is detected, the attribute aria-invalid is added to the input, set to true. This informs VoiceOver users that the current contents of the form element is invalid.</li>
+            <li>When the error is no longer present, the aria-invalid attribute is removed.</li>
+        </ul>
+        <code>
+            <pre>
+            &lt;label <span class="highlight">for="first-name"</span>>
+                &lt;span>First Name&lt;/span>
+                &lt;span <span class="highlight">aria-hidden="true"</span>>*&lt;/span>
+                &lt;span <span class="highlight">aria-hidden="true"</span>>:&lt;/span>
+            &lt;/label>
+            &lt;input type="text" <span class="highlight">id="first-name"</span> <span class="highlight">aria-required="true"</span> <span class="highlight">aria-describedby="error-msg"</span>>    
+            </pre>
+        </code>
+        <h3>Design Considerations</h3>
+        <ul>
+            <li>When an error is present it is important to ensure the form field is highlighted without relying on colour alone - this is incorrectly commonly seen as only changing the border colour to red.</li>
+            <li>It is important to ensure users with colourblindness or other visual impairments are able to distinguish an error is present. Ensure designs can be understood in black and white.</li>
+        </ul>
+        <hr aria-hidden="true">
+    </main>
+    <footer>
+        <p>This Tooltip is part of R.A.D Components. R.A.D stands for Reusable, Accessible & Dynamic. </p>
+        <p>R.A.D's purpose is to share accessible solutions to web components, ensuring content is accessible to all users.</p>
+        <p>It is built and maintained by <a href="https://lilianna11y.com" id="footer-link">Lily Williams.</a></p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="index.js"></script>
+</html>

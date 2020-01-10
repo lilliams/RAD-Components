@@ -73,6 +73,9 @@ pre > .highlight {
 }
 
 
+button:focus, button:hover, input:focus, input:hover, a:focus, a:hover {
+    outline: dotted 3px #FF00F0;
+}
 
 /**** TOOLTIP STYLES ****/
 

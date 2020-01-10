@@ -72,49 +72,41 @@ pre > .highlight {
 }
 
 
-button:focus, button:hover, input:focus, input:hover, a:focus, a:hover, div:focus {
-    outline: dotted 3px #FF00F0;
+/****** FORM STYLES ******/
+
+.form-example {
+    margin: 50 80;
 }
 
-
-
-/**** MODAL STYLES ****/
-
+input {
+    font-size: 16px;
+    color: #456c63;
+    font-family: Consolas,monospace;
+    font-weight: 600;
+}
 button {
     background-color:#456c63;
     color: white;
     border: 2px solid white;
-    font-size: 20px;
+    font-size: 14px;
+    display: block;
     text-align: center;
-    margin: 20 20;
+    margin: 30 0px;
 }
 
-/**** DIALOG STYLES ****/
-
-.modal-dialog{
-    border: 3px solid black;
-    padding: 1em;
-    position: absolute;
-    top: 20%;
-    right: 20%;
-    left: 20%;
-    background:#456c63;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    z-index: 2;
-    color: white;
+#error-msg {
+    color: #fde3a7;
+    display: block;
+    margin-bottom: 10px;
 }
 
-#close-dialog {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+button:focus, button:hover, input:focus, input:hover, a:focus, a:hover {
+    outline: dotted 3px #FF00F0;
 }
 
-.dimmed-background {
-    background-color:#565656;
-    color: grey;
+i {
+    padding: 0 10px;
 }
-
 
 /**** HIDDEN ****/
 
