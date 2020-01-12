@@ -1,0 +1,114 @@
+/**** .a11y-hidden CLASS FOR HIDING CONTENT OFF SCREEN FOR SCREEN READER USERS ****/
+
+.a11y-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
+/**** MISC STYLES ****/
+
+.header {
+    text-align: center;
+    font-size: 30px;
+}
+.header > h1 {
+    margin: 10px 0px 5px 0px;
+}
+.header > p {
+    font-size: 25px;
+    margin: 0 0 30px 0;
+}
+
+h1,h2,span,div,ul, button, p, h3, footer {
+    font-family: 'Lora', serif;
+}
+
+main, a {
+    width: 85%;
+    margin: 0 auto;
+    color: white;
+}
+body {
+    background-color:#456c63;
+}
+
+.working-example {
+    text-align: center;
+    font-size: 25px;
+    margin: 50px 0px;
+}
+
+footer {
+    text-align: center;
+
+    font-size: 12px;
+    color: white;
+    width: 85%;
+    margin: 30px auto;
+} 
+
+pre {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+pre > .highlight {
+    color:black;
+    background-color: white;
+    font-family: Consolas,monospace;
+}
+
+
+button:focus, button:hover, input:focus, input:hover, a:focus, a:hover {
+    outline: dotted 3px #FF00F0;
+}
+
+/**** Accordion Styles ****/
+
+button {
+    border: 2px solid white;
+    background-color: #456c63;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    color: white;
+    text-align: left;
+}
+
+hr{
+    margin: 30 0px;
+}
+.right {
+    transform: rotate(270deg);
+}
+
+.fa-sort-down {
+    padding: 5px;
+}
+
+.content { 
+    padding: 15px 0px;
+}
+
+ 
+/**** HIDDEN ****/
+
+.hidden {
+    display:none;
+}
+
+

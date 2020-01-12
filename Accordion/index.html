@@ -1,1 +1,67 @@
-TBC
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accordion | RAD Components</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <div class="header">
+            <h1>An Accordion</h1>
+            <p>A "R.A.D Component" by Lily Williams</p>
+            <hr aria-hidden="true">
+        </div>
+        <h2>Working Example</h2>
+        <div>
+            <button aria-controls="tardigrade-content" aria-expanded="false" id="tardigrade-btn">
+                <i class="fas fa-sort-down right" aria-hidden="true"></i>
+                Tardigrades
+            </button>
+            <div id="tardigrade-content" class="content hidden" role="region" aria-labelledby="tardigrade-btn">
+                <p>Tardigrades, often called water bears or moss piglets, are near-microscopic animals with long, plump bodies and scrunched-up heads. They have eight legs, and hands with four to eight claws on each. While strangely cute, these tiny animals are almost indestructible and can even survive in outer space.</p>
+                <a href="test.html">Test link inside accordion content</a>
+            </div>
+        </div>
+        <hr aria-hidden="true">
+        <h2>Supporting Notes</h2>
+        <h3>Accordion Button</h3>
+        <ul>
+            <li>Each button has the attribute aria-expanded, JS is used to set the value of this to true / false depending on if it is expanded or collapsed. This informs screen reader users of the present state of the button.</li>
+            <li>The aria-controls attribute is used with an ID referencing the content region.</li>
+            <li>The icon used is purely decorative so it hidden from users using aria-hidden=true.</li>
+        </ul>
+        <code>
+            <pre>
+            &lt;button <span class="highlight">aria-controls="tardigrade-content" aria-expanded="true" id="tardigrade-btn"</span>>
+                &lt;i class="fas fa-sort-down" <span class="highlight">aria-hidden="true"</span>> &lt;/i>
+                General Information
+            &lt;/button>
+            </pre>
+        </code>
+        <h3>Accordion Content</h3>
+        <ul>
+            <li>Each content area has the role of region to assist screen reader users knowing where the applicable content starts and ends.</li>
+            <li>The region is labelled using aria-labelledby, with an ID referencing the contents of the applicable button. This labels the region for screen reader users.</li>
+        </ul>
+        <code>
+            <pre>
+            &lt;div class="content" <span class="highlight">id="tardigrade-content" role="region" aria-labelledby="tardigrade-btn"</span>>
+                &lt;p>Tardigrades, often called water bears...&lt;/p>
+                &lt;a href="test.html">Test link inside accordion content&lt;/a>
+            &lt;/div>
+            </pre>
+        </code>
+    </main>
+    <footer>
+        <p>This Tooltip is part of R.A.D Components. R.A.D stands for Reusable, Accessible & Dynamic. </p>
+        <p>R.A.D's purpose is to share accessible solutions to web components, ensuring content is accessible to all users.</p>
+        <p>It is built and maintained by <a href="https://lilianna11y.com" id="footer-link">Lily Williams.</a></p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="index.js"></script>
+</html>
