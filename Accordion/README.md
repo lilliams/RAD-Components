@@ -1,4 +1,4 @@
-# RAD-Components - Errors in Forms
+# RAD-Components - An Accordion
 Reusable, Accessible, Dynamic Components
 
 <h2>Supporting Notes</h2>
