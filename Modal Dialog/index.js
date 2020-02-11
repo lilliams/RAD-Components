@@ -43,7 +43,6 @@ $(document).ready(function(){
         openModal();
     });
 
-    dialogBtn.click(openModal);
 
     // CLOSE BUTTON
     closeDialog.click(closeModal);
