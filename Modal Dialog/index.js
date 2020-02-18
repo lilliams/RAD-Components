@@ -3,7 +3,7 @@ $(document).ready(function(){
     // include all interactive elements iwthin this variable 
     const mainContentSelector = '#dialog-btn, #footer-link';
 
-    // variables have to hold a value, a number,a  string, but also a function
+
 
     const dialogBtn = $$('#dialog-btn');
     const dialogWindow = $('#dialog-window');
@@ -14,8 +14,7 @@ $(document).ready(function(){
     const dialogContainer = $('#dialog-window, #dialog-name, #dialog-link, #dialog-content');
 
     const openModal = () => {
-        // jquery function on elements found with jquery
-        // always return element, meaning you can chain
+
         dialogWindow
             .removeClass('hidden')
             .attr('tabindex', '0')
