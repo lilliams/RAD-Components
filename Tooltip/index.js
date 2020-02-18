@@ -1,14 +1,7 @@
 // document.addEventListener('DOMContentLoaded', )
 $(document).ready(function(){ 
 
-    // part 1
-    // const = constant - i dont want this to change. 
-    // let = this can change e.g an array;
-    // get the variables you need first at the top of the file.
-    // a) get elements as variables from the DOM
-    // b) define event listeners;
-    // part 2: an if check evaluates stuff as true or false by default
-    // if you see === true / false, you probably dont need.
+    
     const tooltipBtn = $('#tooltip-btn');
     const tooltipContent = $('.tooltip-content');
     const elementsWithinTooltip = $('.tooltip-content, .tooltip-msg');
