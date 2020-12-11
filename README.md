@@ -8,6 +8,6 @@ Solutions found here are based on a mixture of recommendation from success crite
 
 RAD Components has been built with HTML5, CSS, <a href="https://www.w3.org/TR/wai-aria/">WAI-ARIA</a> and <a href="https://jquery.com">JQuery</a>. Also with a little help from <a href="https://fontawesome.com/icons?d=gallery">Font Awesome</a> for icons and <a href="https://fonts.google.com">Google Fonts</a> for demo purposes.
 
-Each has been thoroughly tested with screen reader softwares including Apple's built in Screen reader <a href="https://www.apple.com/uk/accessibility/mac/vision/">VoiceOver</a> and / or <a href="https://www.nvaccess.org">NVDA</a>.
+Each has been tested with screen reader softwares including Apple's built in Screen reader <a href="https://www.apple.com/uk/accessibility/mac/vision/">VoiceOver</a> and / or <a href="https://www.nvaccess.org">NVDA</a>.
 
 Any questions or ideas feel free to get in touch :)
