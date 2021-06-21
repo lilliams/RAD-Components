@@ -64,9 +64,3 @@ $(document).ready(function(){
     }); 
 });
 
-// const doMathsToNumbers = (a, b, func) => {
-//   return func(a, b);
-// };
-
-// doMathsToNumbers(10,20, (x, y) => x * y);
-// doMathsToNumbers(10,20, (x, y) => x + y);
